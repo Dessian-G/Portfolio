@@ -502,3 +502,16 @@ a.btn-color-1 {
 .skills-list li + li {
   margin-top: 0.3rem;
 }
+
+#projects .project-img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  height: auto;
+}
+
+.project-desc {
+  margin: 0 1rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: rgb(20, 20, 20);
+}
