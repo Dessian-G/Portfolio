@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dessian Guiro | Resume</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        size: Letter;
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #2b2b2b;
+        background: #e9eeec;
+        font-size: 9.6pt;
+        line-height: 1.4;
+      }
+      .page {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 0 auto;
+        background: #fff;
+        padding: 0.55in 0.6in;
+      }
+      @media print {
+        body {
+          background: #fff;
+        }
+        .page {
+          min-height: 0;
+          height: 11in;
+          overflow: hidden;
+        }
+      }
+      header {
+        border-bottom: 3px solid #68a89a;
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+      }
+      h1 {
+        font-size: 24pt;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        line-height: 1.1;
+      }
+      .role {
+        font-size: 12pt;
+        font-weight: 500;
+        color: #3d7d70;
+      }
+      .contact {
+        margin-top: 4px;
+        font-size: 8.2pt;
+        white-space: nowrap;
+        color: #555;
+      }
+      .contact a {
+        color: #555;
+        text-decoration: none;
+      }
+      .contact span + span::before {
+        content: "  |  ";
+        white-space: pre;
+        color: #aaa;
+      }
+      h2 {
+        font-size: 10.5pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: #3d7d70;
+        margin: 12px 0 5px;
+      }
+      .item {
+        margin-bottom: 7px;
+      }
+      .item-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .item-title {
+        font-weight: 600;
+      }
+      .date {
+        color: #666;
+        white-space: nowrap;
+        font-size: 8.8pt;
+      }
+      .sub {
+        color: #555;
+        font-style: italic;
+      }
+      ul {
+        padding-left: 15px;
+        margin-top: 2px;
+      }
+      li + li {
+        margin-top: 1px;
+      }
+      .skills div {
+        margin-bottom: 2px;
+      }
+      .skills b {
+        font-weight: 600;
+      }
+      a.link {
+        color: #3d7d70;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Dessian Guiro</h1>
+        <div class="role">Full-Stack Web Developer &middot; Fort Worth, TX</div>
+        <div class="contact">
+          <span
+            ><a href="mailto:dessianguiro@gmail.com">dessianguiro@gmail.com</a></span
+          >
+          <span
+            ><a href="https://dessian-g.github.io/Portfolio/"
+              >dessian-g.github.io/Portfolio</a
+            ></span
+          >
+          <span><a href="https://github.com/Dessian-G">github.com/Dessian-G</a></span>
+          <span
+            ><a href="https://www.linkedin.com/in/dessianmaximeguiro/"
+              >linkedin.com/in/dessianmaximeguiro</a
+            ></span
+          >
+        </div>
+      </header>
+
+      <h2>Summary</h2>
+      <p>
+        Full-stack web developer who builds responsive, mobile-first
+        applications from the database to the user interface. Recent work
+        includes a local classifieds PWA and a delivery e-commerce platform
+        built for real users in Abidjan. Brings the discipline of 10+ years in
+        operations at Amazon and hands-on training in industrial maintenance
+        and automation.
+      </p>
+
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <div>
+          <b>Languages:</b> JavaScript (ES6+), TypeScript, HTML, CSS
+        </div>
+        <div>
+          <b>Front-end:</b> React.js, Vite, Tailwind CSS, Material UI,
+          responsive design, Progressive Web Apps
+        </div>
+        <div>
+          <b>Back-end &amp; data:</b> Node.js, Express.js, RESTful APIs,
+          PostgreSQL, MySQL, MongoDB, Firebase, Supabase
+        </div>
+        <div>
+          <b>Tools:</b> Git, GitHub, Vercel, Netlify, Leaflet maps, Microsoft
+          Excel and Office
+        </div>
+      </div>
+
+      <h2>Projects</h2>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"
+            >6 Kilomètres &mdash; local classifieds PWA</span
+          >
+          <a class="link date" href="https://6kilometres.vercel.app"
+            >6kilometres.vercel.app</a
+          >
+        </div>
+        <ul>
+          <li>
+            Marketplace to buy, sell, rent or find a service within 6 km in
+            Abidjan, installable on Android.
+          </li>
+          <li>
+            Built for low-end phones and unstable connections with TypeScript
+            and Supabase.
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"
+            >Mon Commerce &mdash; delivery e-commerce app</span
+          >
+          <a class="link date" href="https://livraison-app-two.vercel.app"
+            >livraison-app-two.vercel.app</a
+          >
+        </div>
+        <ul>
+          <li>
+            Online shop with product catalog, cart and separate spaces for
+            customers, delivery drivers and admin.
+          </li>
+          <li>
+            React, Firebase (Auth, Firestore, Storage, Functions) and Leaflet
+            live map.
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">PuppyBowl &mdash; React app</span>
+          <a
+            class="link date"
+            href="https://664d8d5193cb4b9f234d6cf1--inspiring-croquembouche-5006ca.netlify.app/"
+            >Live demo</a
+          >
+        </div>
+        <ul>
+          <li>
+            Single-page app consuming a REST API to list, view, add and remove
+            players (fetch, async/await, POST and DELETE requests).
+          </li>
+        </ul>
+      </div>
+
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">Freelance Web Developer</span>
+          <span class="date">Jul 2023 &ndash; Present</span>
+        </div>
+        <div class="sub">Self-employed, Fort Worth, TX</div>
+        <ul>
+          <li>
+            Design, build and deploy full-stack web applications with React,
+            Node.js/Express and Firebase or Supabase.
+          </li>
+          <li>
+            Develop and maintain back-end APIs and databases (PostgreSQL, MySQL,
+            MongoDB).
+          </li>
+          <li>
+            Work with clients and designers to deliver user-friendly, responsive
+            interfaces.
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"
+            >Transportation Operations Management Associate</span
+          >
+          <span class="date">2015 &ndash; Present</span>
+        </div>
+        <div class="sub">Amazon</div>
+        <ul>
+          <li>
+            Yard management and fast-moving consumer goods flow in a
+            high-volume operation.
+          </li>
+          <li>Teamwork, time management, Microsoft Excel and Office.</li>
+        </ul>
+      </div>
+
+      <h2>Education &amp; Certifications</h2>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"
+            >RME Upskilling, Level 2 &mdash; Unmudl</span
+          >
+        </div>
+        <div>
+          Safety, precision measurement, blueprint reading, mechanical, fluid
+          power and electrical maintenance, robots, PLCs and CNC machining.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"
+            >Certified Web Developer &mdash; Fullstack Academy</span
+          >
+          <span class="date">Aug 2023 &ndash; Apr 2024</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"
+            >Bachelor of Environmental Science &mdash; University of Texas at
+            Arlington</span
+          >
+          <span class="date">May 2026</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"
+            >Associate Degree &mdash; Dallas College, North Lake Campus</span
+          >
+          <span class="date">May 2019</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"
+            >Master's Degree in Environment and Cartography &mdash; Université
+            Félix Houphouët-Boigny</span
+          >
+          <span class="date">Jan 2010</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
