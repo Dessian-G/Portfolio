@@ -511,3 +511,8 @@ a.btn-color-1 {
   line-height: 1.4;
   color: rgb(20, 20, 20);
 }
+
+#about .about-details-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
