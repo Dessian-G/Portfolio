@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Dessian Guiro | Web Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Dessian Guiro, full-stack web developer (React, Node.js, Express, PostgreSQL)."
+    />
+    <meta property="og:title" content="Dessian Guiro | Web Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack web developer. Projects, skills and contact."
+    />
+    <meta property="og:image" content="./assets/profil.jpeg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="./assets/profil.jpeg" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
@@ -29,57 +41,51 @@
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
+        <ul class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#education" onclick="toggleMenu()">Education</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+        </ul>
       </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profil.jpeg" alt="Dessian Guiro profile picture" />
+        <img src="./assets/profil.jpeg" alt="Dessian Guiro" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Dessian Guiro</h1>
         <p class="section__text__p2">Web Developer</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
+          <span class="btn btn-color-2 btn-disabled" aria-disabled="true">
             CV Coming Soon
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+          </span>
+          <a class="btn btn-color-1" href="#contact">Contact Info</a>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/dessianmaximeguiro/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/dashboard'"
-          />
+          <a
+            href="https://www.linkedin.com/in/dessianmaximeguiro/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="./assets/linkedin.png" alt="LinkedIn profile" class="icon" />
+          </a>
+          <a href="https://github.com/Dessian-G" target="_blank" rel="noopener">
+            <img src="./assets/github.png" alt="GitHub profile" class="icon" />
+          </a>
         </div>
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">when to know more!</p>
+      <p class="section__text__p1">Want to know more?</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
           <img
             src="./assets/profil.jpeg"
-            alt="Profile picture"
+            alt="Dessian Guiro"
             class="about-pic"
           />
         </div>
@@ -101,26 +107,40 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p> May 2019 Associate Degree ,Dallas college <br /> Bachelor Degree</p>
+              <p>Associate Degree, Dallas College <br />Fullstack Academy, Unmudl</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-                I am currently working for Amazon while completing Full-Stack Academy’s Web Development program. At Fullstack Academy, .
-                My Expertise
-                Front-end Development: I specialize in crafting responsive and user-friendly web interfaces using HTML, CSS, and JavaScript. I have experience with modern libraries and frameworks such as React.
-                Back-end Development: I am proficient in server-side scripting with technologies like Node, and I have experience with database management systems such as MySQL and MongoDB What I enjoy most about web development is the opportunity for me to apply creative problem-solving. along with my emphasis on building constructive routines that I developed as a personal trainer. In my free time, you can likely find me listening to music, or in the kitchen cooking meals!
-                I'm excited to connect with fellow professionals and explore opportunities to contribute my skills and passion to innovative web development endeavors. Feel free to reach out, and let's connect to discuss how we can create digital magic together.
+              I work at Amazon while completing Fullstack Academy's Web
+              Development program, where I build full-stack applications from
+              the database to the user interface.
+            </p>
+            <p>
+              <strong>Front-end:</strong> I build responsive, user-friendly
+              interfaces with HTML, CSS and JavaScript, and modern libraries
+              such as React and Material UI.
+            </p>
+            <p>
+              <strong>Back-end:</strong> I write server-side code with Node.js
+              and Express, and work with databases such as PostgreSQL.
+            </p>
+            <p>
+              What I enjoy most about web development is creative
+              problem-solving, along with the disciplined routines I built as a
+              personal trainer. In my free time you will find me listening to
+              music or cooking in the kitchen.
+            </p>
+            <p>
+              I'm excited to connect with other professionals and to bring my
+              skills to innovative web projects. Feel free to reach out!
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
+      <a href="#experience" class="arrow-link">
+        <img src="./assets/arrow.png" alt="Go to experience" class="icon arrow" />
+      </a>
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
@@ -131,22 +151,14 @@
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/html.jpg"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/html.jpg" alt="HTML logo" class="icon" />
                 <div>
                   <h3>HTML</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/css.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/css.png" alt="CSS logo" class="icon" />
                 <div>
                   <h3>CSS</h3>
                   <p>Experienced</p>
@@ -155,7 +167,7 @@
               <article>
                 <img
                   src="./assets/react-logo-1.png"
-                  alt="Experience icon"
+                  alt="React logo"
                   class="icon"
                 />
                 <div>
@@ -166,7 +178,7 @@
               <article>
                 <img
                   src="./assets/JavaScript-logo.png"
-                  alt="Experience icon"
+                  alt="JavaScript logo"
                   class="icon"
                 />
                 <div>
@@ -177,7 +189,7 @@
               <article>
                 <img
                   src="./assets/typescript.png"
-                  alt="Experience icon"
+                  alt="TypeScript logo"
                   class="icon"
                 />
                 <div>
@@ -187,8 +199,8 @@
               </article>
               <article>
                 <img
-                  src="./assets/material ui.png"
-                  alt="Experience icon"
+                  src="./assets/material-ui.png"
+                  alt="Material UI logo"
                   class="icon"
                 />
                 <div>
@@ -199,12 +211,12 @@
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title"> Back end Development</h2>
+            <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
                 <img
                   src="./assets/PostgreSQL-Logo.png"
-                  alt="Experience icon"
+                  alt="PostgreSQL logo"
                   class="icon"
                 />
                 <div>
@@ -213,33 +225,25 @@
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/nodejs.jpeg"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/nodejs.jpeg" alt="Node.js logo" class="icon" />
                 <div>
-                  <h3>Node JS</h3>
+                  <h3>Node.js</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
                 <img
                   src="./assets/express.png"
-                  alt="Experience icon"
+                  alt="Express logo"
                   class="icon"
                 />
                 <div>
-                  <h3>Express JS</h3>
+                  <h3>Express.js</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/github.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/github.png" alt="Git logo" class="icon" />
                 <div>
                   <h3>Git</h3>
                   <p>Intermediate</p>
@@ -249,130 +253,92 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      <a href="#education" class="arrow-link">
+        <img src="./assets/arrow.png" alt="Go to education" class="icon arrow" />
+      </a>
+    </section>
+    <section id="education">
+      <p class="section__text__p1">My</p>
+      <h1 class="title">Education</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img
+              src="./assets/education.logo.webp"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Fullstack Academy</h3>
+            <p>Web Development program <br />Full-stack JavaScript</p>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/education.logo.webp"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Unmudl</h3>
+            <p>RME Upskilling, Level 2</p>
+            <ul class="skills-list">
+              <li>Safety practices in advanced manufacturing</li>
+              <li>Precision measurement and blueprint reading</li>
+              <li>Mechanical, pneumatic and hydraulic maintenance</li>
+              <li>Electrical maintenance and troubleshooting</li>
+              <li>Robots, PLCs and CNC machining</li>
+              <li>Critical thinking to improve operations</li>
+            </ul>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/education.logo.webp"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Dallas College</h3>
+            <p>Associate Degree <br />May 2019</p>
+          </div>
+        </div>
+      </div>
+      <a href="#projects" class="arrow-link">
+        <img src="./assets/arrow.png" alt="Go to projects" class="icon arrow" />
+      </a>
     </section>
     <section id="projects">
-      <p class="section__text__p1"> Here My Recent</p>
+      <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/puppy.jpeg"
-                alt="Project 1"
+                alt="PuppyBowl project screenshot"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <h2>PuppyBowl</h2>
+            <h2 class="experience-sub-title project-title">PuppyBowl</h2>
             <div class="btn-container">
-              <button
+              <a
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Dessian-G/PuppyBowl/tree/main/PuppyBowl'"
+                href="https://github.com/Dessian-G/PuppyBowl/tree/main/PuppyBowl"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
               >
-                Github
-              </button>
-              <button
+              <a
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://664d8d5193cb4b9f234d6cf1--inspiring-croquembouche-5006ca.netlify.app/'"
+                href="https://664d8d5193cb4b9f234d6cf1--inspiring-croquembouche-5006ca.netlify.app/"
+                target="_blank"
+                rel="noopener"
+                >Live Demo</a
               >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/BookBuddy .png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <h2>BookBuddy</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Dessian-G/Unit3.BookBuddy.Starter'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://6655410043b44b7febf8de9f--peppy-cuchufli-ffe632.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/ecom.webp"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <h2>e-commerce website</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://moonlit-beignet-3d30fb.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project4.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Four</h2>
-            <h2>coming Soon</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-              >
-                Live Demo
-              </button>
             </div>
           </div>
         </div>
       </div>
-      <img
-      
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <a href="#contact" class="arrow-link">
+        <img src="./assets/arrow.png" alt="Go to contact" class="icon arrow" />
+      </a>
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
@@ -392,7 +358,14 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p>
+            <a
+              href="https://www.linkedin.com/in/dessianmaximeguiro/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </p>
         </div>
       </div>
     </section>
@@ -402,12 +375,16 @@
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Dessian Guiro. All Rights Reserved.</p>
+      <p>
+        Copyright &#169; <span id="year">2024</span> Dessian Guiro. All Rights
+        Reserved.
+      </p>
     </footer>
     <script src="script.js"></script>
   </body>
